@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="60" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"/>
+    </filter>
+  </defs>
+  <g filter="url(#bbblurry-filter)" transform="matrix(1, 0, 0, 1, 8.41893, 34.172562)">
+    <ellipse rx="170" ry="156.5" cx="470.52467705435424" cy="402.6051186868798" fill="#a3d0f7"/>
+    <ellipse rx="170" ry="156.5" cx="452.19454775827217" cy="316.742776304994" fill="hsla(198, 64%, 68%, 1.00)"/>
+    <ellipse rx="170" ry="156.5" cx="312.6374825905905" cy="414.91211835408234" fill="hsla(213, 69%, 66%, 1.00)"/>
+  </g>
+  <path d="M 312.975 512.746 C 302.285 512.746 293.249 509.055 285.867 501.675 C 278.487 494.294 274.796 485.259 274.796 474.568 L 274.796 345.433 C 274.796 334.741 278.487 325.706 285.868 318.326 C 293.248 310.944 302.285 307.254 312.975 307.254 L 370.525 307.254 L 400.001 336.731 L 487.027 336.731 C 497.718 336.731 506.753 340.421 514.133 347.803 C 521.514 355.183 525.205 364.218 525.205 374.909 L 525.205 474.568 C 525.205 485.259 521.514 494.294 514.133 501.675 C 506.753 509.055 497.718 512.746 487.027 512.746 L 312.975 512.746 Z" style="paint-order: fill; fill: rgb(255, 255, 255); fill-opacity: 0.5;"/>
+</svg>

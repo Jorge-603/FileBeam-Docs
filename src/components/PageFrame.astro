@@ -1,0 +1,135 @@
+---
+import MobileMenuToggle from "virtual:starlight/components/MobileMenuToggle";
+import type { Props } from "../props";
+import Banner from "./Banner.astro";
+
+const { hasSidebar, labels } = Astro.props;
+---
+
+<div class="page sl-flex">
+    <Banner />
+    <header class="header z-10"><slot name="header" /></header>
+    {
+        hasSidebar && (
+            <nav
+                class="sidebar"
+                aria-label={labels["sidebarNav.accessibleLabel"]}
+            >
+                <MobileMenuToggle {...Astro.props} />
+                <div id="starlight__sidebar" class="sidebar-pane">
+                    <div class="sidebar-content sl-flex">
+                        <slot name="sidebar" />
+                    </div>
+                </div>
+            </nav>
+        )
+    }
+    <div class="main-frame"><slot /></div>
+</div>
+
+<style>
+    .page {
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .header {
+        width: 100%;
+        position: fixed;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        height: var(--sl-nav-height);
+        z-index: var(--sl-z-index-navbar);
+        padding-inline-end: var(--sl-nav-pad-x);
+        background-color: var(--sl-color-bg-nav);
+        padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x);
+        border-bottom: 1px solid var(--sl-color-hairline-shade);
+    }
+
+    @media (width >= 800px) {
+        body.banner-open {
+            header.header,
+            div.sidebar-pane,
+            mobile-starlight-toc nav,
+            div.main-frame,
+            div.right-sidebar {
+                @apply mt-10;
+            }
+        }
+    }
+
+    html[data-has-hero] {
+        .header {
+            @apply bg-transparent border-b border-solid border-transparent;
+            img {
+                @apply filter brightness-200;
+            }
+        }
+        .page:before {
+            @apply top-0 z-10 content-['_'] w-full h-24 fixed;
+            background: linear-gradient(
+                from theme("colors.gray.900") to transparent
+            );
+        }
+
+        html,
+        body {
+            max-height: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+    }
+
+    :global([data-has-sidebar]) .header {
+        padding-inline-end: calc(
+            var(--sl-nav-gap) + var(--sl-nav-pad-x) + var(--sl-menu-button-size)
+        );
+    }
+
+    .sidebar-pane {
+        width: 100%;
+        position: fixed;
+        overflow-y: auto;
+        inset-inline-start: 0;
+        z-index: var(--sl-z-index-menu);
+        inset-block: var(--sl-nav-height) 0;
+        background-color: var(--sl-color-black);
+        visibility: var(--sl-sidebar-visibility, hidden);
+    }
+
+    :global([aria-expanded="true"]) ~ .sidebar-pane {
+        --sl-sidebar-visibility: visible;
+    }
+
+    .sidebar-content {
+        gap: 1rem;
+        height: 100%;
+        flex-direction: column;
+        min-height: max-content;
+        padding: 1rem var(--sl-sidebar-pad-x) 0;
+    }
+
+    @media (min-width: 50rem) {
+        .sidebar-content::after {
+            content: "";
+            padding-bottom: 1px;
+        }
+    }
+
+    .main-frame {
+        padding-inline-start: var(--sl-content-inline-start);
+        padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
+    }
+
+    @media (min-width: 50rem) {
+        :global([data-has-sidebar]) .header {
+            padding-inline-end: var(--sl-nav-pad-x);
+        }
+        .sidebar-pane {
+            --sl-sidebar-visibility: visible;
+            width: var(--sl-sidebar-width);
+            background-color: var(--sl-color-bg-sidebar);
+            border-inline-end: 1px solid var(--sl-color-hairline-shade);
+        }
+    }
+</style>

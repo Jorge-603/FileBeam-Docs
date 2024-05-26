@@ -1,0 +1,28 @@
+name: Publicar Docs
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'astro.config.mjs'
+      - 'package-lock.json'
+      - 'package.json'
+      - 'tailwind.config.mjs'
+      - 'tsconfig.json'
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy a traves de SSH
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd ~/filebeam-docs/
+          git checkout -- .
+          git pull origin master
+          npm run build

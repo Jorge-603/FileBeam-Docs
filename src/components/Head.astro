@@ -1,0 +1,21 @@
+---
+import type { Props } from "@astrojs/starlight/props";
+import Default from "@astrojs/starlight/components/Head.astro";
+const { entry, lang } = Astro.props;
+const { data } = entry;
+console.log(data.title);
+---
+
+<Default {...Astro.props}><slot /></Default>
+
+<!-- <script {...data}>
+    const data = Object.fromEntries(
+        Array.from(document.currentScript.attributes).map((attr) => [
+            attr.name,
+            attr.value,
+        ]),
+    );
+</script> -->
+
+<meta property="og:image" content="https://filebeam.xyz/file/9s2eSG.png" />
+<meta name="twitter:image" content="https://filebeam.xyz/file/9s2eSG.png" />

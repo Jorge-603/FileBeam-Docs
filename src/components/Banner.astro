@@ -1,0 +1,52 @@
+---
+import { Icon } from "@astrojs/starlight/components";
+---
+
+<div
+    id="banner"
+    class="invisible fixed z-10 hidden h-10 w-full items-center justify-center gap-1 bg-accent-200 pl-4 pr-11 font-bold text-gray-600 [@media(min-width:50rem)]:flex"
+>
+    <Icon name="rocket" />
+    <span class="truncate">
+        La proxima version de FileBeam (v2.0), para la cual esta hecha esta
+        documentacion, sera lanzada pronto.
+    </span>
+    <a
+        data-dismiss
+        href="/releases/sapphire"
+        class="truncate text-inherit hover:text-gray-900"
+    >
+        Ver Mas
+    </a>
+    <div
+        data-dismiss
+        class="fixed right-4 flex cursor-pointer items-center justify-center"
+    >
+        <Icon name="close" class="size-6 hover:text-gray-900" />
+    </div>
+</div>
+
+<script>
+    // Identificador del banner para recordar preferencias
+    // Cambiar al actualizar el contenido para volver a mostrar el banner
+    const key = "Banner_UIRedesign.25.04";
+
+    function closeBanner() {
+        document.body.classList.remove("banner-open");
+        document.getElementById("banner").remove();
+        localStorage.setItem(key, true);
+    }
+
+    if (key in localStorage) {
+        closeBanner();
+    } else {
+        document.getElementById("banner").style.visibility = "visible";
+        document.body.classList.add("banner-open");
+    }
+
+    for (const element of document.querySelectorAll("[data-dismiss]")) {
+        element.addEventListener("click", function (event) {
+            closeBanner();
+        });
+    }
+</script>
