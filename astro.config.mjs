@@ -38,7 +38,7 @@ export default defineConfig({
         },
       ],
       editLink: {
-        baseUrl: 'https://github.com/filebeam/docs/edit/master/',
+        baseUrl: 'https://github.com/filebeam/docs/edit/main/',
       },
       customCss: ['./src/tailwind.css'],
       lastUpdated: true,
