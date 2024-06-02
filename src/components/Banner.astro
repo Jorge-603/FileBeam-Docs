@@ -34,7 +34,7 @@ import { Icon } from "@astrojs/starlight/components";
     function closeBanner() {
         document.body.classList.remove("banner-open");
         document.getElementById("banner").remove();
-        localStorage.setItem(key, true);
+        localStorage.setItem(key, "true");
     }
 
     if (key in localStorage) {
