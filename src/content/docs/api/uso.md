@@ -7,7 +7,7 @@ FileBeam cuenta con una API simple de usar que te permite hacer uso de este mism
 
 ## Introducción
 
-* **URL Base:** `https://filebeam.xyz/api.php`
+* **URL Base:** `https://filebeam.xyz/api/` (importante añadir la ultima diagonal al final de /api/)
 * **Método:** `POST`
 
 ## Uso Basico
@@ -17,15 +17,15 @@ La API requiere de un argumento `file`, con la ruta al archivo deseado.
 Puedes subir un archivo a FileBeam a través de la API usando *curl* de la siguiente manera:
 
 ```bash
-$ curl -X POST -F "file=@/ruta/al/archivo.png" https://filebeam.xyz/api.php
+$ curl -X POST -F "file=@/ruta/al/archivo.png" https://filebeam.xyz/api/
 https://filebeam.xyz/file/LvmcHH.png
 ```
 
 ## Argumentos Adicionales
 
-### `time`
+### `time` (aún no disponible)
 
-El argumento **time** indicará por cuánto tiempo el archivo estará disponible; puedes usarlo para subidas temporales. El valor debe ser alguno de los siguientes: `1, 2, 6, 12, 24, 48, 72`
+El argumento **time** indicará por cuánto tiempo el archivo estará disponible; puedes usarlo para subidas temporales. El valor debe ser alguno de los siguientes: `1, 2, 6, 12, 24, 48, 72`. La unidad de tiempo es por horas.
 
 ## Restricciones
 
