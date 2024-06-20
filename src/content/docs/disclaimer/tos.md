@@ -65,7 +65,7 @@ El Administrador se reserva el derecho de modificar estos Términos en cualquier
 
 ## 8. Legislacion Aplicable
 
-Estos Términos se regirán e interpretarán de acuerdo con las leyes de los Estados Unidos Mexicanos, y cualquier disputa que surja en relación con estos Términos estará sujeta a la jurisdicción exclusiva de los tribunales de los Estados Unidos Mexicanos.
+Estos Términos se regirán e interpretarán de acuerdo con las leyes de los Estados Unidos Mexicanos y de California, USA, y cualquier disputa que surja en relación con estos Términos estará sujeta a la jurisdicción exclusiva de los tribunales de los Estados Unidos Mexicanos al igual que de California, USA.
 
 ## 9. Licencias de código libre
 
