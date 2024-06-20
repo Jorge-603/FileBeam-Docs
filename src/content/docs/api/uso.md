@@ -9,6 +9,8 @@ FileBeam cuenta con una API simple de usar que te permite hacer uso de este mism
 
 * **URL Base:** `https://filebeam.xyz/api/` (importante añadir la ultima diagonal al final de /api/)
 * **Método:** `POST`
+* **Argumentos necesarios:** `file`
+* **Tipo de codificación:** `multipart/form-data`
 
 ## Uso Basico
 
@@ -18,7 +20,7 @@ Puedes subir un archivo a FileBeam a través de la API usando *curl* de la sigui
 
 ```bash
 $ curl -X POST -F "file=@/ruta/al/archivo.png" https://filebeam.xyz/api/
-https://filebeam.xyz/file/LvmcHH.png
+# Resultado de la peticion -> https://filebeam.xyz/file/LvmcHH.png
 ```
 
 ## Argumentos Adicionales
