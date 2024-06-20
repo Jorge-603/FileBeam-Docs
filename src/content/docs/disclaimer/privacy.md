@@ -7,7 +7,7 @@ editUrl: false
 ---
 
 :::caution[Actualización]
-Fecha y hora de actualización: 20/06/2024 
+Fecha y hora de actualización: 20/06/2024 04:36 PM horario del Centro de México.
 :::
 
 # 1. Archivos subidos
