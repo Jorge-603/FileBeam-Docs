@@ -28,6 +28,10 @@ Puedes subir cualquier tipo de archivo siempre y cuando se mantenga de acuerdo a
 * **.cpl**: Archivos de Panel de Control
 * **.jsp**: Archivos JavaServer Pages
 * **.doc, .docx**: Documentos de Microsoft Word
+* **.exe:** Archivos ejecutables de Microsoft Windows
+* **.sh:** Scripts BASH
+
+De igual forma, los archivos de marcado o scripting (.js, .php, .xml, .html y variantes) se distribuyen en texto plano, evitando su ejecución y/o visualización en el servidor.
 
 ### Lineamientos
 Se permite el almacenamiento de archivos (incluido contenido explícito) que no infrinjan ninguna ley o regulación vigente, que no sean perjudiciales, amenazantes, difamatorios, ofensivos, violentos o que inciten al odio. Cualquier contenido ilegal será eliminado y se tomarán las medidas correspondientes.
