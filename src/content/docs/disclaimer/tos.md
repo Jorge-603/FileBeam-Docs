@@ -10,7 +10,7 @@ editUrl: false
 Terminos y condiciones actualizados. Fecha y hora de actualización: 20/06/2024 3:43 PM horario del Centro de México
 :::
 
-Estos Términos y Condiciones ("Términos") rigen el uso del servicio de alojamiento, acceso y compartición de archivos mediante enlaces directos (en adelante, el "Servicio") proporcionado por FileBeam (en adelante, el "Webmaster"). Al acceder o utilizar el Servicio, usted acepta estar legalmente vinculado por estos Términos. Si no está de acuerdo con estos Términos, no debe hacer uso de el Servicio.
+Estos Términos y Condiciones ("Términos") rigen el uso del servicio de alojamiento, acceso y compartición de archivos mediante enlaces directos (en adelante, el "Servicio") proporcionado por FileBeam (en adelante, el "Administrador"). Al acceder o utilizar el Servicio, usted acepta estar legalmente vinculado por estos Términos. Si no está de acuerdo con estos Términos, no debe hacer uso de el Servicio.
 
 ## 1. Uso de el Servicio
 
